@@ -1,0 +1,16 @@
+{
+    "bin list": [
+        0.01,
+        0.1,
+        0.5,
+        1,
+        5
+    ],
+    "time interval": [
+        -50,
+        100
+    ],
+    "number of data points": 16980,
+    "data set name": "dp31-03",
+    "data set path": "data\\dp31-03"
+}

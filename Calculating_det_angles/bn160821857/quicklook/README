@@ -1,0 +1,125 @@
+The files in the quicklook directory are produced in near real-time using data
+telemetered via a TDRSS link, and are available about 10-15 minutes after the
+trigger time.   Lightcurves and spacecraft pointing history files are produced
+in .gif format and/or combined in pdf files as follows:
+
+glg_lc_all_bnyymmddfff.gif:  12 plots showing count rates between 8 keV and 1
+MeV for all 12 NaI detectors, and covering the period from -120 to 450 s from
+trigger time = 0.
+
+The data in this and other lightcurves is available at different temporal
+resolutions according to the time from t=0.  In this lightcurve, the blue points
+are at 1-s resolution, the black at 4-s resolution.
+
+Other temporal ranges, resolutions, energy, and detector selection are available
+as follows:
+
+glg_lc_hires12_bnyymmddfff.gif:  a plot showing the highest resolution real-time
+data - red is 64 ms, green is 256 ms - from -1 to +2 s from t=0 for the
+detectors that triggered on this event (summed) between 10 and 44 keV.
+
+glg_lc_medres12_bnyymmddfff.gif:  a plot showing medium resolution real-time
+data (1 s) from -2 to +60 s from t=0 for the detectors that triggered on this
+event (summed) between 10 and 44 keV.
+
+glg_lc_lores12_bnyymmddfff.gif:  a plot showing medium (blue = 1 s) and coarse
+(black = 4 s) resolution real-time data from -120 to +450 s from t=0 for the
+detectors that triggered on this event (summed) between 10 and 44 keV.
+
+glg_lc_hires34_bnyymmddfff.gif:  a plot showing the highest resolution real-time
+data - red is 64 ms, green is 256 ms - from -1 to +2 s from t=0 for the
+detectors that triggered on this event (summed) between 10 and 44 keV.
+
+glg_lc_medres34_bnyymmddfff.gif:  a plot showing medium resolution real-time
+data (1 s) from -2 to +60 s from t=0 for the detectors that triggered on this
+event (summed) between 10 and 44 keV.
+
+glg_lc_lores34_bnyymmddfff.gif:  a plot showing medium (blue = 1 s) and coarse
+(black = 4 s) resolution real-time data from -120 to +450 s from t=0 for the
+detectors that triggered on this event (summed) between 10 and 44 keV.
+
+glg_lc_hires567_bnyymmddfff.gif:  a plot showing the highest resolution
+real-time data - red is 64 ms, green is 256 ms - from -1 to +2 s from t=0 for
+the detectors that triggered on this event (summed) between 300 and 1000 keV.
+
+glg_lc_medres567_bnyymmddfff.gif:  a plot showing medium resolution real-time
+data (1 s) from -2 to +60 s from t=0 for the detectors that triggered on this
+event (summed) between 300 and 1000 keV.
+
+glg_lc_lores567_bnyymmddfff.gif:  a plot showing medium (blue = 1 s) and coarse
+(black = 4 s) resolution real-time data from -120 to +450 s from t=0 for the
+detectors that triggered on this event (summed) between 300 and 1000 keV.
+
+glg_lc_chan12_bnyymmddfff.pdf:  a selection of lightcurves for the trigger
+detectors (separately), the BGO detectors, and then each of the NaI detectors in
+turn, in the energy range 10-44 keV (NaI) and 150-400 keV (BGO).
+
+glg_lc_chan34_bnyymmddfff.pdf:  a selection of lightcurves for the trigger
+detectors (separately), the BGO detectors, and then each of the NaI detectors in
+turn, in the energy range 44-300 keV (NaI) and 150-400 keV (BGO).
+
+glg_lc_chan567_bnyymmddfff.pdf:  a selection of lightcurves for the trigger
+detectors (separately), the BGO detectors, and then each of the NaI detectors in
+turn, in the energy range 300-1000 keV (NaI) and 150-3000 MeV (BGO).
+
+glg_lc_chantot_bnyymmddfff.pdf: a selection of lightcurves for the trigger
+detectors (summed) over each of the 8 energy channels, at each of the 3 time
+resolutions.  This is followed by the same selection for the 2 BGO detectors
+(separately).
+
+glg_lc_tot_bnyymmddfff.pdf: a selection of lightcurves for the trigger detectors
+(summed, then separately) and the BGO detectors, between 8 keV and 1000 MeV.
+This is followed by the lightcurves over the 3 temporal resolutions for each of
+the NaI detectors, summed over the entire 8 keV --- 1000 keV energy range.
+
+glg_lc_zradec_bnyymmddd.gif:   The spacecraft pointing (Z and X-axes) over the
+period of the lightcurves, -150 -- 450 s from t=0.
+
+Triggers classified as gamma-ray bursts may also have the following file
+available:
+
+glg_lc_bcat_bnyymmddfff_v00.png
+
+These lightcurves show the temporal structure in three energy bands (10 - 50
+keV, 50 - 300 keV, and 300 keV - 40 MeV) for the total counts registered in the
+NaI detectors (top two plots) and BGO detector used in the catalog analysis of
+GBM GRBs in the 1st GBM GRB catalog.  The general catalog analysis and detector
+selection are described in Paciesas et al. 2011 and the spectral analysis is
+described in Goldstein et al. 2011.  In most cases, the selection is the set of
+NaI detectors with source angles less than 60 degrees, and with a view of the
+burst that is unobstructed by the LAT, radiators, or other detectors, plus the
+closest BGO detector.  In bursts where there are no NaI detectors at small
+angles, we select the detectors which triggered on the burst.  Event data (TTE)
+are used for all events where the TTE coverage (approximately 20 s pre-trigger
+to 300 s post trigger) overlaps the entire t90 period.  The time range and
+resolution (16 ms to 1 s) of the plots made with TTE data are determined as a
+function of the duration (t90) and t90 start time relative to trigger time of
+the GRB.  Lightcurves for longer GRBs, and those which start considerably before
+trigger time, are made using CSPEC data, with 4-second resolution pre-trigger
+and 1-second resolution thereafter.  The trigger time is shown as a red dashed
+line, and the borders of the t90 interval are plotted as turquoise solid lines.
+
+Data products relating to source localization are delivered when the Burst
+Advocate analyzes the real-time data and generates a localization.  They are
+available only for GRBs and only when GBM has the best localization at the time
+of the analysis.  This may later be superseded by a localization from the
+Interplanetary Network (IPN) or from another instrument with localization
+capabilities.  The localizations are also distributed through Gamma-ray
+Coordination Network (GCN) notices.  The products here relate to the uncertainty
+associated with these localizations. They contain the same information, in text
+and graphic form.
+
+glg_locplot_all_bnyymmddfff.png: the 1, 2, 3 sigma uncertainty contours for the
+GRB localization.  The red curves include the systematic error added in
+quadrature to the statistical uncertainty based on the team's best knowledge of
+the systematic error at the time of the localization.  The black curves show the
+statistical uncertainties.
+
+glg_loclist_all_bnyymmddfff.txt: the values that go into the contour plot.   The
+chi2 minimum/minima are given as RA, Dec values (J2000) followed by the 1, 2, 3
+sigma contours including the systematic uncertainty.  Each set of RA, Dec pairs
+is precede by the number of data points, n.  For a localization with a single
+minimum (the usual case), this will be 1, followed by the RA, Dec that gives the
+lowest chi2 value on the grid of sky points.  Then n1 gives the number of RA,
+Dec pairs used to construct the 1 sigma contour, followed by n1 x RA, Dec
+values, and so on.
