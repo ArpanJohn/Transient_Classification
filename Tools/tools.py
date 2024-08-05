@@ -36,17 +36,23 @@ def extract_strings_html(html_file_path):
     return strings
 
 
-def create_folder(folder): # to create the file to store data in
-    print(folder)
+def create_folder(folder,carefull = False): # to create the file to store data in
+    # print(folder)
     try:
         if os.path.isdir(folder):
             print(f"Folder '{folder}' already exists.")
-            print(f"delete {folder} y/n?")
-            if input() == 'y':
+            if carefull:
+                print(f"delete {folder} y/n?")
+                if input() == 'y':
+                    shutil.rmtree(folder)
+                    print(f"Folder '{folder}' and its contents removed successfully.")
+                else:
+                    print(f"Folder '{folder}' was not removed.")
+                    return
+            else:
                 shutil.rmtree(folder)
                 print(f"Folder '{folder}' and its contents removed successfully.")
-            else:
-                raise ValueError('exit')
+
     except FileNotFoundError:
         print(f"Folder '{folder}' not found.")
     except OSError as e:
