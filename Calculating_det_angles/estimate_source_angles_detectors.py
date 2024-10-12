@@ -68,6 +68,6 @@ def angle_to_grb(ra,dec,trigdat_file):
     brightest_nai = angls_nai[res_nai[0]]
     bright_nais = [angls_nai[res_nai[0]],angls_nai[res_nai[1]],angls_nai[res_nai[2]]]
     brightest_bgo = [angls_bgo[res_bgo[0]]]
-    return(brightest_nai,bright_nais,brightest_bgo)
+    return(brightest_nai,bright_nais,brightest_bgo,res_nai[:3])
 
 
