@@ -1,0 +1,24 @@
+def calculate_classwise_confidence_thresholds(model, X, Y, num_classes):
+    predictions = model.predict(X)
+    max_probs = np.max(predictions, axis=1)
+    predicted_labels = np.argmax(predictions, axis=1)
+    # if Y is one-hot encoded
+    if Y.ndim == 2: 
+        true_labels = np.argmax(Y, axis=1)
+    else:  
+        true_labels = Y
+    
+    classwise_thresholds = {}
+
+    for class_idx in range(num_classes):
+        # Filter predictions class
+        correct_class_mask = (true_labels == class_idx) & (predicted_labels == class_idx)
+        if np.sum(correct_class_mask) > 0: 
+            avg_confidence = np.mean(max_probs[correct_class_mask])
+            classwise_thresholds[class_idx] = avg_confidence
+        else:
+            classwise_thresholds[class_idx] = None  # If no correct predictions 
+    return classwise_thresholds
+
+classwise_thresholds = calculate_classwise_confidence_thresholds(model, X_test, Y_test, num_classes=4)
+print(f'Class-specific confidence thresholds: {classwise_thresholds}')
